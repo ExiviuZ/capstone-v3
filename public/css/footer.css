@@ -1,0 +1,15 @@
+footer {
+  color: white;
+  background-color: #001122;
+  padding-block: 1.5rem;
+  margin-top: auto;
+}
+
+footer > div {
+  margin: auto;
+  width: 80%;
+}
+
+.footer-img {
+  width: 60px;
+}/*# sourceMappingURL=footer.css.map */

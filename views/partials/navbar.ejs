@@ -1,0 +1,24 @@
+<nav>
+  <span class="nav-brand">Barangay Census</span>
+  <ul class="nav-links">
+    <% if(!currentUser) {%>
+    <li><a href="/register">Sign Up</a></li>
+    <li><a href="/login">Login</a></li>
+    <% } else { %>
+    <li class="user">
+      <img src="/img/profile.svg" class="user-profile" /><%= currentUser.admin ?
+      currentUser.name : `${currentUser.firstName} ${currentUser.lastName}` %> ▼
+      <ul class="user-dropdown">
+        <% if(!currentUser.admin){ %>
+        <li><a href="/user/profile">Profile</a></li>
+        <li><a href="/user/census">Census</a></li>
+        <li><a href="/user/community">Community</a></li>
+        <% } else {%>
+        <li><a href="/admin/dashboard">Dashboard</a></li>
+        <% } %>
+        <li><a href="/logout">Log-out</a></li>
+      </ul>
+    </li>
+    <% }%>
+  </ul>
+</nav>
